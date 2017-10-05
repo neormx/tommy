@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+                          http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                          http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
+                          http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+  <util:list id="applicationMenu" value-type="mx.com.hexabytes.web.MenuOption">
+    <!-- bean class="mx.com.hexabytes.core.web.MenuOption">
+      <property name="code" value="line" />
+      <property name="name" value="Línea" />
+      <property name="icon" value="arrows-alt" />
+    </bean>
+    <bean class="mx.com.hexabytes.core.web.MenuOption">
+      <property name="code" value="brand" />
+      <property name="name" value="Marca" />
+      <property name="icon" value="registered" />
+    </bean>
+    <bean class="mx.com.hexabytes.core.web.MenuOption">
+      <property name="code" value="product" />
+      <property name="name" value="Producto" />
+      <property name="icon" value="circle-o" />
+    </bean>
+    <bean class="mx.com.hexabytes.core.web.MenuOption">
+      <property name="code" value="article" />
+      <property name="name" value="Artículo" />
+      <property name="icon" value="star" />
+    </bean -->
+  </util:list>
+
+  <!-- jee:local-slsb id="identifierBean" jndi-name="java:module/IdentifierBean"
+        business-interface="mx.com.hexabytes.core.service.IdentifierLocal" />
+
+  <jee:local-slsb id="compositeBean" jndi-name="java:module/CompositeBean"
+        business-interface="mx.com.hexabytes.core.service.CompositeLocal" / -->
+
+</beans>

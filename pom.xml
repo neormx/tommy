@@ -5,38 +5,115 @@
   <artifactId>tommy</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>tommy Maven Webapp</name>
+  <name>tommy</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <!-- versions -->
+    <cdi.weld.version>3.0.0.Final</cdi.weld.version>
+    <jaxrs.resteasy.version>3.1.4.Final</jaxrs.resteasy.version>
+    <spring.framework.version>4.3.11.RELEASE</spring.framework.version>
+    <tiles.version>3.0.7</tiles.version>
+    <jstl.version>1.2</jstl.version>
+    
+    <loggin.version>2.8.2</loggin.version>
+    <junit.version>4.12</junit.version>
+    <mockito.version>2.8.47</mockito.version>
+  </properties>
   <dependencies>
+    <!-- JEE -->
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
-        <version>3.0.1</version>
+        <version>3.1.0</version>
         <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${jstl.version}</version>
     </dependency>
     <dependency>
         <groupId>org.jboss.weld.servlet</groupId>
         <artifactId>weld-servlet-core</artifactId>
-        <version>3.0.0.Final</version>
+        <version>${cdi.weld.version}</version>
     </dependency>
     <dependency>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-servlet-initializer</artifactId>
-        <version>3.1.4.Final</version>
+        <version>${jaxrs.resteasy.version}</version>
     </dependency>
     <dependency>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-cdi</artifactId>
-        <version>3.1.4.Final</version>
+        <version>${jaxrs.resteasy.version}</version>
     </dependency>
+    <!-- SPRING -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.framework.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.framework.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.framework.version}</version>
+    </dependency>
+    <!-- TILES -->
+    <dependency>
+      <groupId>org.apache.tiles</groupId>
+      <artifactId>tiles-el</artifactId>
+      <version>${tiles.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tiles</groupId>
+      <artifactId>tiles-extras</artifactId>
+      <version>${tiles.version}</version>
+    </dependency>
+    <!-- LOGS -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${loggin.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <version>${loggin.version}</version>
+    </dependency>
+    <!-- TEST -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>${mockito.version}</version>
+        <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
     <finalName>tommy</finalName>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.2</version>
+            <configuration>
+                <source>${maven.compiler.source}</source>
+                <target>${maven.compiler.target}</target>
+            </configuration>
+        </plugin>
+    </plugins>
   </build>
 </project>

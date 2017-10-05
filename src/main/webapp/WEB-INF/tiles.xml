@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <!-- BASE DEFITION FOR COMPOSITIONS WITH A TOOLBAR -->
+  <definition name="toolbar" template="/WEB-INF/layouts/frame.jsp">
+    <put-attribute name="header">
+      <definition template="/WEB-INF/layouts/navbar.jsp">
+        <put-attribute name="navbar.content" value="/WEB-INF/layouts/navbar.menu.jsp" />
+      </definition>
+    </put-attribute>
+  </definition>
+  <!-- SHARED DEFINITION FOR /pages/system/* COMPOSITIONS -->
+  <definition name="message" extends="toolbar">
+    <put-attribute name="module" value="app" />
+    <put-attribute name="content" value="/WEB-INF/layouts/message.jsp" />
+    <put-list-attribute name="styles">
+      <add-attribute value="/css/jumbotron.css" />
+      <add-attribute value="/css/app.css" />
+    </put-list-attribute>
+  </definition>
+  <!-- BASE DEFITION FOR COMPOSITIONS WITH A MENU -->
+  <definition name="menu" template="/WEB-INF/layouts/frame.jsp">
+    <put-attribute name="header">
+      <definition template="/WEB-INF/layouts/navbar.jsp">
+        <put-attribute name="navbar.content" value="/WEB-INF/layouts/navbar.menu.jsp" />
+        <put-attribute name="navbar.toogle.left.target" value="#menu-content" />
+      </definition>
+    </put-attribute>
+    <put-attribute name="content" value="/WEB-INF/layouts/menu.jsp" />
+  </definition>
+  <!-- ARTICLE MODULE DEFITION -->
+  <!-- definition name="line" extends="menu">
+    <put-list-attribute name="styles">
+      <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.1/ui-grid.min.css" />
+      <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/angular-busy/4.1.3/angular-busy.min.css" />
+      <add-attribute value="/css/dashboard.css" />
+      <add-attribute value="/css/app.css" />
+    </put-list-attribute>
+    <put-list-attribute name="scripts">
+      <add-attribute value="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" />
+      <add-attribute value="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.min.js" />
+      <add-attribute value="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js" />
+      <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js" />
+      <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/angular-busy/4.1.4/angular-busy.min.js" />
+      <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.1/angular-resource.min.js" />
+      <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js" />
+      <add-attribute value="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.1/ui-grid.min.js" />
+      <add-attribute value="http://ui-grid.info/docs/grunt-scripts/csv.js" />
+      <add-attribute value="http://ui-grid.info/docs/grunt-scripts/pdfmake.js" />
+      <add-attribute value="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js" />
+      <add-attribute value="/js/notify.js" />
+      <add-attribute value="/js/app.js" />
+      <add-attribute value="/js/module.js" />
+      <add-attribute value="/modules/frame/module.js" />
+      <add-attribute value="/modules/item/module.js" />
+      <add-attribute value="/modules/stock.js" />
+      <add-attribute value="/modules/items/line.js" />
+    </put-list-attribute>
+  </definition -->
+
+</tiles-definitions>

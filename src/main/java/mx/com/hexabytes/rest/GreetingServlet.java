@@ -1,4 +1,4 @@
-package mx.com.hexabytes.web;
+package mx.com.hexabytes.rest;
 
 import java.io.IOException;
 import javax.inject.Inject;

@@ -1,4 +1,4 @@
-package mx.com.hexabytes.web;
+package mx.com.hexabytes.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

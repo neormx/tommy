@@ -1,0 +1,74 @@
+img.company {
+  display:inline;
+  position:relative;
+  height:1.5em;
+  top:-.1em;
+}
+
+.marginless {
+  margin : 0px
+}
+
+.lineBreakMmargin {
+  margin-bottom: 15px
+}
+
+.cg-busy {
+  z-index: 2000 !important
+}
+
+.help {
+  cursor : help;
+}
+
+.action {
+  cursor : pointer;
+}
+
+heading ul {
+  padding-left: 20px;
+}
+
+heading a {
+  color: blue;
+  text-decoration: underline
+}
+
+heading a:hover {
+  color: blue;
+}
+
+.ui-grid-row:nth-child(odd):hover .ui-grid-cell {
+  border-style: solid none;
+  border-width: 1px;
+  border-color: orange;
+  cursor : pointer;
+  text-decoration: underline;
+  color : blue
+}
+
+.ui-grid-row:nth-child(even):hover .ui-grid-cell{
+  border-style: solid none;
+  border-width: 1px;
+  border-color: orange;
+  cursor : pointer;
+  text-decoration: underline;
+  color : blue
+}
+
+.field-content {
+  font-weight: bold;
+  margin-bottom: 15px;
+  background-color: rgba(245,245,245,1);
+  padding: 8px;
+  border-radius: 5px
+}
+
+.vcenter {
+  vertical-align: middle !important;
+}
+
+.text-inactive {
+  color: silver;
+  text-decoration: line-through
+}
